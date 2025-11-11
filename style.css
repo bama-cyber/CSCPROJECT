@@ -1,0 +1,692 @@
+body{
+    font-family: 'roboto';
+    line-height: 1.6;
+    color: #333;
+    background-color:grey;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 10px; /* Add padding for spacing */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures the header is above other elements */
+    display: flex;
+    flex-direction: column; /* Stack the logo, heading, and menu vertically */
+    align-items: flex; /* Align items to the start (left) */
+}
+.header-content {
+    text-align: center;
+    flex-grow: 1;
+  
+}
+header .logo {
+    background-image: url('images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 0 ;
+    
+     
+}
+header h1 {
+    margin: 10px 0 20px; /* Add spacing below the heading */
+    font-size: 1.8rem;
+}
+/* General Navigation Styles */
+header nav {
+    text-align: center; /* Align the nav to the right */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Add spacing between menu items */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Align menu items to the right */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #ffcc00; /* Highlight color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hide menu on smaller screens */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Ensure menu is visible on desktop view */
+    }
+}
+/* Board Members Section */
+#board {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: bisque;
+}
+
+.board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.board-member-card {
+    text-align: center;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.board-member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.board-member-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.board-member-card a:hover {
+    color: #ffcc00;
+}
+
+.board-member-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.board-member-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Marquee Styles */
+.marquee-container {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+
+
+    /* Animation setup */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+main {
+    margin: 150px auto 20px; /* Adjust this value to account for the header and marquee height */
+    padding: 20px;
+    max-width:  960px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+section {
+    background-color: beige;
+    margin-bottom: 20px;
+}
+
+
+.home-video {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+#about h2{
+    text-align: center;
+}
+
+    
+
+
+
+
+#products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about-image, .product-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.about.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.aboutpix {
+    max-width: 300px;
+    border-radius: 10px;
+
+}
+#gallery {
+    text-align: center;
+}
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+/* Contact Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer p {
+    margin: 0;
+}
+.product-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Upcoming Sales Section */
+#sales {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: burlywood;
+}
+
+.sales-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sale-item {
+    text-align: center;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sale-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sale-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.sale-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* FAQ Section */
+#faq {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: blanchedalmond;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* Consultation Section */
+#consultation {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: gainsboro;
+}
+
+#consultation form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#consultation form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#consultation form input,
+#consultation form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#consultation form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#consultation form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Shop Section */
+#shop {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: silver;
+}
+#shop-banner-video {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.shop-banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shop-item {
+    text-align: center;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.shop-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.shop-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.shop-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #555;
+}
+
+/* Site Structure Section */
+#site-structure {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.site-structure-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.site-structure-list li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.site-structure-list li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-structure-list li a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about.container {
+        flex-direction: column;
+        }
+        .aboutpix {
+            margin-bottom: 20px;
+        }
+    
+    #products .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-item {
+        width: 80%;
+}
+
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Ensure the menu is visible on larger screens */
+    }
+}
+
+.about-text{
+    text-align: center;
+}
+.error {
+    color: red;
+    
+}
+.aboutpix {
+    display: block;
+    margin: 0 auto;
+}
+header nav ul {
+    text-align: center;
+}
+header nav ul li {
+    margin-right: 10px;
+}
+
+.back-home {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+    background-color: #555;
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+/* mobile styles (Media Query) */
+@media (max-width: 768px) {
+    /* hide the navigation <ul> on mobile */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem 0;
+        position: absolute;
+        left: 0;
+        top: 70px; /* Adjust based on header height */
+
+    }
+    /* "active" class javascript will add to the <ul>*/
+    header nav ul.active {
+        display: flex;
+    }
+    /* show the hamburger icon on mobile */
+    .hamburger-menu {
+        display: block;
+    }
+
+    
+}
+/* --Gallery slideshow styles--*/
+.slideshow-container{
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+/* hide all slides by default*/
+.slide{
+    display: none;
+}
+/*styling the "NEXT"and "PREV" buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: 22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+background-color: rgba(0,0,0.3);/*adds a faint black background*/
+
+}
+/*positioning the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/*adding a darker background on hover */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* the dots*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+/* the class my javascript will add to the active dot*/
+.active, .dot:hover{
+    background-color: #717171;
+}
+/* fading animation*/
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4;}
+    to{opacity: 1;}
+}
+
+/* Service page video */
+#service-video-display {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: lightgray;
+}
+
+.service-video {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.services-banner-video {
+    width: 100%;
+    height: 60%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Push the video behind other content if needed */
+}
+
+/* Optional: Add a text overlay on the video */
+#services-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the video */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+}
